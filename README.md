@@ -2,6 +2,9 @@
 
 - A React Native chat app with firebase integration 
 
+<img src="https://github.com/joewhocodes/readme-assets/blob/main/project_images/chatterbox.gif" alt="Chatterbox gif" />
+
+
 ## How to clone
 
 Clone the repo
