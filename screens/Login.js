@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default login = ({navigation}) => {
+export default Login = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
