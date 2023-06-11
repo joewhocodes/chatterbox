@@ -10,10 +10,6 @@ const Login = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const openRegisterScreen = () => {
-      navigation.navigate('Register');
-    };
-
     const handleSignin = () => {
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {

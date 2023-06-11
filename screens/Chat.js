@@ -1,6 +1,5 @@
 import React, {
     useState,
-    useEffect,
     useLayoutEffect,
     useCallback
   } from 'react';
@@ -17,7 +16,8 @@ import React, {
   import { auth, database } from '../firebase';
   import { useNavigation } from '@react-navigation/native';
   import colors from '../colors';
-
+  import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons/faRightFromBracket'
+  import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
   export default function Chat() {
 
@@ -37,8 +37,7 @@ import React, {
               }}
               onPress={onSignOut}
             >
-                <Text>Log Out</Text>
-              {/* <AntDesign name="logout" size={24} color={colors.gray} style={{marginRight: 10}}/> */}
+                <FontAwesomeIcon icon={faRightFromBracket} />
             </TouchableOpacity>
           )
         });

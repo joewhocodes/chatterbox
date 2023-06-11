@@ -3,6 +3,7 @@ import { View, TouchableOpacity, Text, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import colors from '../colors';
 import { faMugSaucer } from '@fortawesome/free-solid-svg-icons/faMugSaucer'
+import { faComments } from '@fortawesome/free-solid-svg-icons/faComments'
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const Home = () => {
@@ -12,18 +13,18 @@ const Home = () => {
     useEffect(() => {
         navigation.setOptions({
             headerLeft: () => (
-                <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
+                <FontAwesomeIcon icon={faMugSaucer} size={24} color={colors.gray} style={{marginLeft: 15}}/>
             ),
-            // headerRight: () => (
-            //     <Image
-            //         source={}
-            //         style={{
-            //             width: 40,
-            //             height: 40,
-            //             marginRight: 15,
-            //         }}
-            //     />
-            // ),
+            headerRight: () => (
+                <Image
+                    source={{  }}
+                    style={{
+                        width: 40,
+                        height: 40,
+                        marginRight: 15,
+                    }}
+                />
+            ),
         });
     }, [navigation]);
 
@@ -33,7 +34,7 @@ const Home = () => {
                 onPress={() => navigation.navigate("Chat")}
                 style={styles.chatButton}
             >
-                {/* <Entypo name="chat" size={24} color={colors.lightGray} /> */}
+                <FontAwesomeIcon icon={faComments} />
             </TouchableOpacity>
         </View>
     );
