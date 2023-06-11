@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Login = ({navigation}) => {
+export default login = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -12,14 +12,14 @@ const Login = ({navigation}) => {
             <Input
                 placeholder='Enter your email'
                 label='Email'
-                leftIcon={{ type: 'material', name: 'email' }}
+                // leftIcon={{ type: 'material', name: 'email' }}
                 value={email}
                 onChangeText={text => setEmail(text)}
             />
             <Input
                 placeholder='Enter your password'
                 label='Password'
-                leftIcon={{ type: 'material', name: 'lock' }}
+                // leftIcon={{ type: 'material', name: 'lock' }}
                 value={password}
                 onChangeText={text => setPassword(text)}
                 secureTextEntry
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Login;
+// export default login
