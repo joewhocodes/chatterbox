@@ -61,7 +61,7 @@ const Register = () => {
                 value = {avatar}
                 onChangeText={text => setAvatar(text)}
             />
-            <Button title='register' style={styles.button} />
+            <Button title='register' onPress={register} style={styles.button} />
         </View>
     )
 }

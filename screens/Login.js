@@ -3,9 +3,13 @@ import { View, StyleSheet } from 'react-native'
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default Login = ({navigation}) => {
+const Login = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const openRegisterScreen = () => {
+      navigation.navigate('Register');
+    };
 
     return (
         <View style={styles.container}>
@@ -25,7 +29,7 @@ export default Login = ({navigation}) => {
                 secureTextEntry
             />
             <Button title='sign in' style={styles.button} />
-            <Button title='register' style={styles.button} />
+            <Button title="register" style={styles.button} onPress={openRegisterScreen} />
         </View>
     )
 }
@@ -42,4 +46,4 @@ const styles = StyleSheet.create({
     }
 });
 
-// export default login
+export default Login;
