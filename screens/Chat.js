@@ -6,6 +6,7 @@ import { signOut } from 'firebase/auth';
 import { collection, addDoc, getDocs, query, orderBy, onSnapshot } from 'firebase/firestore';
 import { GiftedChat } from 'react-native-gifted-chat';
 
+
 const Chat = ({ navigation }) => {
     const [messages, setMessages] = useState([]);
     const signOutNow = () => {
