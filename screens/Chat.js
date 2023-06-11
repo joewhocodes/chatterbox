@@ -37,7 +37,8 @@ import React, {
               }}
               onPress={onSignOut}
             >
-              <AntDesign name="logout" size={24} color={colors.gray} style={{marginRight: 10}}/>
+                <Text>Log Out</Text>
+              {/* <AntDesign name="logout" size={24} color={colors.gray} style={{marginRight: 10}}/> */}
             </TouchableOpacity>
           )
         });
