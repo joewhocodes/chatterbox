@@ -3,18 +3,14 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   TextInput,
   Image,
   SafeAreaView,
   TouchableOpacity,
   StatusBar,
-  Alert,
 } from 'react-native';
-import {Input} from 'react-native-elements';
 import {auth} from '../firebase';
 import {signInWithEmailAndPassword} from 'firebase/auth';
-import Icon from 'react-native-vector-icons/FontAwesome';
 const backImage = require('../assets/backImage.png');
 
 const Login = ({navigation}) => {
