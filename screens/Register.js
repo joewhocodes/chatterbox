@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native'
 import { Input, Button } from 'react-native-elements';
 import { auth } from '../firebase';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
-const Register = () => {
+const Register = ({ navigation }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -22,7 +22,15 @@ const Register = () => {
                   : 'https://gravatar.com/avatar/94d45dbdba988afacf30d916e7aaad69?s=200&d=mp&r=x',
               })
                 .then(() => {
-                  alert('Registered, please login.');
+                    signInWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                      navigation.navigate('Chat');
+                    })
+                    .catch((error) => {
+                      const errorCode = error.code;
+                      const errorMessage = error.message;
+                      alert(errorMessage);
+                    });
                 })
                 .catch(error => {
                   alert(error.message);
