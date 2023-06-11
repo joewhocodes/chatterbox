@@ -71,9 +71,8 @@
 
 ### Built With
 
-* [React.js](https://reactjs.org/)
-* [Bootstrap](https://getbootstrap.com)
-* [Redux](https://redux.js.org/)
+* [React Native](https://reactnative.dev)
+* [Firebase](https://firebase.google.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
