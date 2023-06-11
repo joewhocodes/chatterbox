@@ -1,6 +1,7 @@
-import { initializeApp, getApp } from 'firebase/app';
-import { initializeFirestore } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+// import Constants from 'expo-constants';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDRfCQXdCixXPrWB56nolDi8nbC_FhpKMI',
@@ -11,9 +12,7 @@ const firebaseConfig = {
   appId: '1:1095977468590:web:b0cba9c35c6d3cb04e233f',
 };
 
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-const db = initializeFirestore(app, {experimentalForceLongPolling: true});
-
-export { db, auth };
+// initialize firebase
+initializeApp(firebaseConfig);
+export const auth = getAuth();
+export const database = getFirestore();

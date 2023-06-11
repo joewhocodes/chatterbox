@@ -5,13 +5,13 @@ import { auth } from '../firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 const backImage = require("../assets/backImage.png");
 
-const Register = ({ navigation }) => {
+const Signup = ({ navigation }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [avatar, setAvatar] = useState('');
 
-    const handleRegister = () => {
+    const handleSignup = () => {
         createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
               // Registered
@@ -70,7 +70,7 @@ const Register = ({ navigation }) => {
           value={password}
           onChangeText={(text) => setPassword(text)}
         />
-        <TouchableOpacity style={styles.button} onPress={handleRegister}>
+        <TouchableOpacity style={styles.button} onPress={handleSignup}>
           <Text style={{fontWeight: 'bold', color: '#fff', fontSize: 18}}> Sign Up</Text>
         </TouchableOpacity>
         <View style={{marginTop: 20, flexDirection: 'row', alignItems: 'center', alignSelf: 'center'}}>
@@ -135,4 +135,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Register;
+export default Signup;

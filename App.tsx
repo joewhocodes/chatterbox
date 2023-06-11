@@ -1,8 +1,8 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack'
-import { NavigationContainer } from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
 import LoginScreen from './screens/Login';
-import RegisterScreen from './screens/Register';
+import SignupScreen from './screens/Signup';
 import ChatScreen from './screens/Chat';
 
 const Stack = createStackNavigator();
@@ -10,10 +10,13 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator >
-        <Stack.Screen name='Login' component={LoginScreen} />
-        <Stack.Screen name='Register' component={RegisterScreen} />
-        <Stack.Screen name='Chat' component={ChatScreen} />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Screen name="Chat" component={ChatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
