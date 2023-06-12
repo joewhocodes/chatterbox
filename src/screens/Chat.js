@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect, useCallback } from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat';
 import {
 	collection,
@@ -8,8 +8,8 @@ import {
 	query,
 	onSnapshot,
 } from 'firebase/firestore';
-import { signOut } from 'firebase/auth';
-import { auth, database } from '../src/firebase/firebase';
+import { signOut } from '../firebase/firebase';
+import { auth, database } from '../firebase/firebase';
 import { useNavigation } from '@react-navigation/native';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons/faRightFromBracket';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';

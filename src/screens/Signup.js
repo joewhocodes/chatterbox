@@ -9,7 +9,7 @@ import {
 	TouchableOpacity,
 	StatusBar,
 } from 'react-native';
-import { auth } from '../src/firebase/firebase';
+import { auth } from '../firebase/firebase';
 import {
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,

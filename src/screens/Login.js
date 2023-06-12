@@ -9,9 +9,9 @@ import {
 	TouchableOpacity,
 	StatusBar,
 } from 'react-native';
-import { auth } from '../src/firebase/firebase';
+import { auth } from '../firebase/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-const backImage = require('../assets/backImage.png');
+const backImage = require('../assets/backImage.png/')
 
 const Login = ({ navigation }) => {
 	const [email, setEmail] = useState('');

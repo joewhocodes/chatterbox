@@ -4,10 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { View, ActivityIndicator } from 'react-native';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './src/firebase/firebase';
-import Login from './screens/Login';
-import Signup from './screens/Signup';
-import Chat from './screens/Chat';
-import Home from './screens/Home';
+import Login from './src/screens/Login';
+import Signup from './src/screens/Signup';
+import Chat from './src/screens/Chat';
+import Home from './src/screens/Home';
 
 const Stack = createStackNavigator();
 const AuthenticatedUserContext = createContext({});
